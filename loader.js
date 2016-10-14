@@ -6,7 +6,7 @@ function loader(frameID,src,retryintervul){
   this.content = "";
   this.loading = function(){
     try{
-      this.content = this.iframe.contentDocument.body.innerHTML;
+      load.content = load.iframe.contentDocument.body.innerHTML;
     }catch(e){
       setTimeout(this.loading,this.retryintervul);
     }
