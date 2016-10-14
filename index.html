@@ -5,6 +5,13 @@
       loader.js test
     </title>
     <script src=loader.js></script>
+    <script>
+      var load = new loader("loadframe","test.html",500);
+      function onWinLoad(){
+        load.load();
+      }
+      window.onload=onWinLoad;
+    </script>
   </head>
   <body>
     <div hidden>
