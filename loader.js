@@ -5,10 +5,10 @@ function loader(frameID,src,retryintervul){
   this.retryintervul = retryintervul || 1000;
   this.content = "";
   this.loading = function(){
-    if(this.iframe.contentDocument.getElementById("file_name").innerHTML=this.src){
+    try{
       this.content = this.iframe.contentDocument.body.innerHTML;
-    }else{
-      setInterval(this.loading,this.retryintervul);
+    }catch(e){
+      setTimeout(this.loading,this.retryintervul);
     }
   }
 }
