@@ -6,8 +6,9 @@
     </title>
     <script src=loader.js></script>
     <script>
-      var load = new loader("loadframe","test.html",500);
+      var load;
       function onWinLoad(){
+        load = new loader("loadframe","test.html",500);
         load.load();
       }
       window.onload=onWinLoad;
